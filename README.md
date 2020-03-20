@@ -1,102 +1,62 @@
-# React Native Boilerplate: Apollo - Redux - React Navigation
+# React Native test by Gastón Briones
+## Installation
 
-## Overview
+``` bash
+# clone the repo
+$ git clone git@github.com:gasbriones/heru-tech-app.git
 
-This is a boilerplate application for building apps with react-native created from react-native init. Using Apollo, Redux and React Navigation. Helps you stay productive by following best practices
+# go into app's directory
+$ cd heru-tech-app
 
-Inspired from [React-boilerplate - A highly scalable, offline-first foundation with the best developer experience and a focus on performance and best practices ](https://github.com/react-boilerplate/react-boilerplate).
-
-### Features
-
-| Feature                                | Summary                                                                                                                                                                                                                                                     |
-|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  Generators 	 | Allows you to auto-generate boilerplate code for common parts of your application, specifically components, containers and routes navigations  |
-| Apollo                  	 	 | [Apollo client](http://dev.apollodata.com/): The flexible, production ready GraphQL client for React and native apps.  |
-| Redux                  	 	 | [Redux](https://github.com/reactjs/redux) is a predictable state container for JavaScript apps.  |
-| Reselect                  	 	 | [Reselect](https://github.com/reactjs/reselect) is a simple “selector” library for Redux.|
-| Redux Logger                 	 	 | [Redux Logger ](https://github.com/evgenyrodionov/redux-logger) is a logger for Redux.  |
-| React Navigation                  	 	 | [React Navigation](https://reactnavigation.org/) start quickly with built-in navigators that deliver a seamless out-of-the box experience.  |
-| Code Linting               			 | JavaScript code linting is done using [ESLint](http://eslint.org) - a pluggable linter tool for identifying and reporting on patterns in JavaScript.
-
-## Change App name
-Default name is 'boilerplate' and if you open your project on Xcode or Android Studio this is how you see its name, to change it follow the next steps:
-- First make a copy of the react-native-boilerplate directory. And go to your newly cloned directory.
-- Change the app name at index.ios.js and index.android.js files which is given as a parameter to AppRegistry.
-```js
-// Change this line
-change AppRegistry.registerComponent('boilerplate', () => App);
-
-// To this
-AppRegistry.registerComponent('your-desire-app-name', () => App);
-```
-- Change the name and version accordingly on cloned-directory/package.json
-```js
-// Change this
-{
-  "name": "boilerplate",
-  "displayName": "boilerplate"
-}
-
-// To this
-{
-  "name": "your-desire-app-name",
-  "displayName": "your-desire-app-name"
-}
-```
-- Delete /ios and /android folders which are remaining from your older app.
-- To generate /ios and /android folders again run.
-```sh
-- Old upgrade proyect
-react-native upgrade
-
-- Rename proyect
-react-native eject
-
-- Upgrade proyect
-npm install react-native-git-upgrade --dev
-react-native-git-upgrade
+# install app's dependencies
+$ npm install
 
 ```
-- For any native dependency run.
-```sh
-react-native link
-```
-- Finally run react-native run-ios or anything you want.
+## Based
+This project was bootstrapped with https://github.com/morenoh149/fullstack-apollo-react-native-boilerplate
 
+### Basic usage
 
-## Getting Started
-
-Clone the repo:
-```sh
-git clone
-cd boilerplate
-```
-Install dependencies:
-```js
-npm install
-
-npm run setup
+``` bash
+$ npm run android
 ```
 
-Start the app:
-```sh
-# Start android app
-react-native run-android
+## What's included
 
-# Start iOS app
-react-native run-ios
-```
-
-Generators:
-```sh
-# Run generator menu
-npm run generate
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
 ```
+prueba-react-js #v1.0.0
+├── public/          #static files
+│   ├── images/      #assets
+│   ├── data/        #data.json
+│   └── index.html   #html template
+│
+├── src/                     #project root
+│   ├── actions/             #redux actions
+│   ├── actionsCreators/     #redux actionsCreators
+│   ├── components/          #custom components source
+│   ├── constants/           #config constants
+│   ├── containers/          #container source
+│   ├── lang/                #internationalize source
+│   ├── pages/               #page source
+│   ├── reducer/             #redux reducers source
+│   ├── scss/                #user scss/css source
+│   ├── store/               #redux store
+│   ├── App.js
+│   ├── index.js
+│   ├── _navigator.js        #sidebar config
+│   └── _routes.js    #routes config
+│
+└── package.json
+```
+## External libraries
+- chart.js and react-chartjs-2 [https://www.chartjs.org/docs/latest/] (used in summary page)
+- react-bootstrap [https://react-bootstrap.github.io/getting-started/introduction] (used for create markup)
+- react-bootstrap-table [http://allenfang.github.io/react-bootstrap-table/docs.html] (used in table page)
+- react-loadable [https://github.com/jamiebuilds/react-loadable] (loading components with dynamic imports.)
+- react-redux [https://redux.js.org/basics/usage-with-react/] (state management)
+- reactstrap [https://reactstrap.github.io/components/] (components based in bootstrap)
 
-## License
-This project is licensed under the [MIT License](#)
 
-## Info
 
-David González – david.1820@gmail.com
