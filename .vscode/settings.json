@@ -1,0 +1,5 @@
+{
+  "javascript.validate.enable": false,
+  "jsDocCompletion.enabled": false,
+  "typescript.surveys.enabled": false
+}

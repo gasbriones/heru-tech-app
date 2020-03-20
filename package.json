@@ -1,0 +1,55 @@
+{
+  "name": "ghost",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "prod": "cd android && ./gradlew assembleRelease",
+    "generate": "plop --plopfile internals/generators/index.js",
+    "setup": "node ./internals/utils/startup.js",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
+    "lint": "npm run lint:eslint -- . ",
+    "test": "./node_modules/eslint/bin/eslint.js . "
+  },
+  "dependencies": {
+    "immutable": "^3.8.2",
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.2",
+    "react": "16.4.1",
+    "react-native": "0.56.0",
+    "react-native-linear-gradient": "^2.5.4",
+    "react-native-maps": "^0.23.0",
+    "react-native-svg": "^9.4.0",
+    "react-native-vector-icons": "^6.4.2",
+    "react-navigation": "^2.12.1",
+    "url-parse": "^1.4.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "23.4.2",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react-native": "^5",
+    "eslint": "^5.4.0",
+    "eslint-plugin-flowtype": "^3.4.2",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-native": "^3.2.1",
+    "flow-bin": "^0.94.0",
+    "jest": "23.5.0",
+    "plop": "^2.1.0",
+    "pre-commit": "^1.2.2",
+    "react-test-renderer": "16.4.1",
+    "reactotron-react-native": "^3.2.1",
+    "shelljs": "^0.8.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "npm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  }
+}

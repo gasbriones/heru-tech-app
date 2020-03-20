@@ -1,0 +1,82 @@
+/*
+ * @flow
+ * {{properCase name }}
+ */
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as {{ properCase name }}Actions from './actions';
+import select{{ properCase name }} from './selectors';
+import {
+  Text,
+  View,
+  BackHandler
+} from 'react-native';
+
+// my components
+import Header from '../../components/Header';
+import BodyContainer from '../BodyContainer';
+
+import styles from './styles.js';
+
+type Props = {
+  // navigation
+  navigation: Object
+}
+
+export class {{ properCase name }} extends Component <Props, {}>{
+  state = {
+
+  };
+  componentDidMount () {
+    BackHandler.addEventListener('hardwareBackPress', this._handleBackPress);
+  }
+
+  componentWillUnmount () {
+    BackHandler.removeEventListener('hardwareBackPress', this._handleBackPress);
+  }
+
+  _handleBackPress = () => {
+    const { navigation: { goBack } } = this.props;
+    goBack(); // works best when the goBack is async
+    return true;
+  }
+  render () {
+    const { navigation } = this.props;  // eslint-disable-line
+    return (
+      <BodyContainer style={styles.container}>
+        <View>
+          <Text>{{ properCase name }} container</Text>
+        </View>
+      </BodyContainer>
+    );
+  }
+}
+
+{{properCase name}}.navigationOptions = ({ navigation, screenProps }) => ({ // eslint-disable-line
+  header: (
+    <Header
+      title={'{{properCase name}}'}
+      iconDrawer={true}
+      navigation={navigation}
+    />
+  )
+});
+
+{{#if wantActionsAndReducer}}
+const mapStateToProps = select{{ properCase name }}();
+{{/if}}
+
+function mapDispatchToProps (dispatch) {
+  const actions = bindActionCreators({{ properCase name }}Actions, dispatch);
+  return {
+    dispatch,
+    ...actions
+  };
+}
+
+{{#if wantActionsAndReducer}}
+export default connect(mapStateToProps, mapDispatchToProps)({{ properCase name }});
+{{else}}
+export default connect(mapDispatchToProps)({{ properCase name }});
+{{/if}}
